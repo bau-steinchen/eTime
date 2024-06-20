@@ -1,9 +1,39 @@
 <!DOCTYPE html>
 <html>
+    <head>
+		<title>sTime - Time logging made easy!</title>
+        <link rel="stylesheet" href="assets/css/main.css">
+	</head>
     <body>
+        <div class="content-center">
+            <div class="div-center">
+                <h1 style="margin-top: 30%;">eTime</h1>
+                <div class="panel-color shadow-right">
+                    <h2 class="text-shadow">Login</h3>
+                    <div class="div-center">
+                        <form action="/login" method="POST">
+                            <%- include('../forms/_form_login') %>
+                        </form>
+                    </div>
+                    <hr style="height:2px;border-width:0;color:gray;background-color:gray">
+                    <div>
+                        <h2 class="text-shadow">Start Local</h2>
+                        <a href="/user">Start</a>
+                        <!-- <button type="button" id="import-directory">Select location</button>
+                        <input type="file" id="file-input" />
+                        <output id="list"></output> -->
+                    </div>
+                    <div style="height: 50px;">
 
-        <h1>eTime</h1>
-        <p>Time capturing</p>
+                    </div>
+
+                </div>
+            </div>
+            
+        </div>
+
+
+        
 
     </body>
 </html>

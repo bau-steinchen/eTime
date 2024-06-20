@@ -1,5 +1,7 @@
 const path = require('path')
 
+const user = require('./routes/user');
+
 const express = require('express');
 const mongoose = require('mongoose');
 const methodOverride = require('method-override');
@@ -33,6 +35,11 @@ app.get('/', async(req, res) => {
     res.render('main/index');
 })
 
+//TODO login
+app.post('/login', async(req, res) => { // placeholder until login can be provided
+    res.render('main/index');
+})
+
 // this ist default route to about page
 app.get('/about', async(req, res) => {
     res.render('main/about')
@@ -42,6 +49,10 @@ app.get('/about', async(req, res) => {
 app.get('/imprint', async(req, res) => {
     res.render('main/imprint')
 })
+
+// Router definitions
+// this routes handle all user related pages
+app.use('/user', user);
 
 // this will start the webserver with the port to listen at
 app.listen(port);

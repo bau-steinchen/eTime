@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+		<title>sTime - Time logging made easy!</title>
+        <link rel="stylesheet" href="assets/css/main.css">
+	</head>
+    <body>
+        <div class="content-center">
+            <div class="div-center">
+                <!-- Top Bar -->
+                <div>
+                    <button type="button"><</button>
+                    <button style="width: 50%;" type="button"><%= today %></button>
+                    <button type="button">></button>
+                </div>
+                <!-- aktual time list -->
+                <div> 
+                    <div style="width: 50%;justify-items: center;" class="div-center">
+                        <label style="float: left;">Start Time</label>
+                        <label>End Time</label>
+                        <label style="float: right;">Total Time</label>
+                    </div>
+                    <% if (series != "") {
+                        series.forEach(serie => { %>
+                                <div style="width: 50%;" class="div-center">
+                                    <label style="float: left;"><%= serie.start %></label>
+                                    <label style="float: unset;"><%= serie.end %></label>
+                                    <label style="float: right;"><%= serie.total %></label>
+                                </div>
+                    <% }) }%>
+                </div>
+                <!-- add new time series -->
+                <div> 
+                    <div style="width: 50%;" class="div-center">
+                        <form style="justify-content: space-between;" action="/user/update">
+                            <input style="float: left; width: 35%; height: 25px;" type="time" id="start" name="start">
+                            <input style="width: 35%;height: 25px;" type="time" id="end" name="end">
+                            <input style="float: right; width: 25%;height: 25px;" type="submit">
+                        </form>
+                    </div>
+                </div>
+                <!-- Time bar -->
+                <div>
+                    <dl>
+                        <dt>A title of the graph</dt>
+                        <dd class="percentage"><span class="text"> Data 1: 20% </span></dd>
+                        <dd class="percentage"><span class="text"> Data 2: 50% </span></dd>
+                        <dd class="percentage"><span class="text"> Data 3: 30% </span></dd>
+                      </dl>
+                </div>
+            </div>            
+        </div>
+    </body>
+</html>

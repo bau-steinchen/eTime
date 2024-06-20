@@ -1,0 +1,37 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700,800");
+@import url("fontawesome-all.min.css");
+
+
+#file-input {
+    display: none;
+}
+
+.content-center {
+    text-align: center;
+    /* border: 3px solid green; */
+  }
+
+.div-center {
+    margin: auto;
+    width: 50%;
+    /* border: 3px solid green; */
+    padding: 10px;
+  }
+
+.text-center {
+    text-align: center;
+    /* border: 3px solid green; */
+  }
+
+.panel-color {
+    background-color: #329fe7;
+} 
+
+.shadow-right {
+    -webkit-box-shadow: 5px 5px 15px 2px rgba(18,70,105,0.79); 
+    box-shadow: 5px 5px 15px 2px rgba(18,70,105,0.79);
+} 
+
+.text-shadow {
+    text-shadow: 2px 2px 2px #FFFFFF;
+} 
